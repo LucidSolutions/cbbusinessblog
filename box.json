@@ -1,0 +1,45 @@
+{
+    "name":"Responsive Theme - Business Blog",
+    "version":"1.0",
+    "author":"Lucid Outsourcing Solutions",
+    "location":"https://github.com/LucidSolutions/cbbusinessblog/archive/master.zip",
+    "homepage":"http://www.ortussolutions.com/products/contentbox",
+    "documentation":"https://github.com/LucidSolutions/cbbusinessblog",
+    "repository":{
+        "type":"git",
+        "URL":"https://github.com/LucidSolutions/cbbusinessblog"
+    },
+    "bugs":"https://github.com/LucidSolutions/cbbusinessblog/issues",
+    "slug":"cbbusinessblog",
+    "shortDescription":"Responsive Blog Theme - Business Blog",
+    "description":"Responsive Blog Theme - Business Blog",
+    "instructions":"",
+    "changelog":"",
+    "type":"contentbox-themes",
+    "license":[
+        {
+            "type":"Apache2",
+            "URL":"http://www.apache.org/licenses/LICENSE-2.0"
+        }
+    ],
+    "contributors":[
+        
+    ],
+    "dependencies":{
+        
+    },
+    "devDependencies":{
+        
+    },
+    "installPaths":{
+        
+    },
+    "scripts":{
+        
+    },
+    "ignore":[
+        "**/.*",
+        "test",
+        "tests"
+    ]
+}
