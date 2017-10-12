@@ -87,7 +87,7 @@ component{
 		{ name="showBehanceOnTop", 	group="Social Options", defaultValue="", type="text",	label="Show Behance icon in social media options"},
 		{ name="showVimeoOnTop", 	group="Social Options", defaultValue="", type="text",	label="Show Vimeo icon in social media options"},
 		{ name="showYoutubeOnTop", 	group="Social Options", defaultValue="", type="text",	label="Show Youtube icon in social media options"},
-		{ name="addThisURL", 		group="Social Options", defaultValue="", type="text",	label="Shows AddThis Icon"},
+		{ name="addThisURL", 		group="Social Options", defaultValue="", type="text",	label="AddThis Social Plugin API KEY"},
 		{ name="singleBlogOptions",	group="Social Options", defaultValue="true", type="boolean", label="Show Options in Single Blog", required="false"},
 		{ name="showBannerImg", 	group="Banner",	defaultValue="", type="text",	label="Enter Banner Image"},
 		{ name="showBannerHeading", group="Banner", defaultValue="", type="text",	label="Enter Banner Heading"},
