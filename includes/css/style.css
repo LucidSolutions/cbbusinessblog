@@ -1524,3 +1524,19 @@ span.glyphicon.glyphicon-file, span.glyphicon.glyphicon-qrcode, span.glyphicon.g
         margin-top: 0.5em
     }
 }
+
+#searchForm .input-group-btn .btn { 
+background:url(../images/search-icon.png) no-repeat;
+background-color:#fa4b2a;
+background-position: center;
+width: 38px;
+height: 34px;
+}
+
+#searchForm .input-group-btn .btn:hover{
+z-index:0;background:url(../images/search.png) no-repeat;
+background-color:#fa4b2a;
+background-position: center;
+width: 38px;
+height: 34px;
+}
