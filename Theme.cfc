@@ -67,7 +67,7 @@ component{
 	// Layout Variables
     this.name       	= "Business Blog";
 	this.description 	= "Content box theme Business Blog";
-	this.version		= "1.0.0";
+	this.version		= "1.1.0";
 	this.author 		= "Lucid Outsourcing Solutions Pvt. Ltd.";
 	this.authorURL		= "https://lucidsolutions.in/";
 	// Screenshot URL, can be absolute or locally in your layout package.
