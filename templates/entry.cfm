@@ -25,7 +25,7 @@
 		</p>
 		<div class="blog-poast-info">
 			<ul>
-				<li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="##"> #entry.getAuthorName()# </a></li>
+				<li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="javascript:void(0)"> #entry.getAuthorName()# </a></li>
 				<li><i class="glyphicon glyphicon-calendar"> </i>#entry.getDisplayPublishedDate()#</li>
 				<li><i class="glyphicon glyphicon-comment"> </i><a href="#cb.linkEntry(entry)###comments" title="View Comments"> #entry.getNumberOfApprovedComments()# Comments</a></li>
 				<li><i class="glyphicon glyphicon-eye-open"> </i>#entry.getnumberOfHits()# views</li>

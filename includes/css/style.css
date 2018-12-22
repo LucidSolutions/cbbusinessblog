@@ -170,10 +170,10 @@ ul.nav.navbar-nav li a:hover{
     color: #fff ! important;
 }
 ul.nav.navbar-nav li a {
-    color: #fff ! important;
+    color: #fff;
     text-transform: uppercase ! important;
     font-weight: 700 ! important;
-    padding: 15px 23px ! important;
+    padding: 15px 23px;
     border-right: 1px solid rgba(255, 255, 255, 0.32) ! important;
     font-size: 1em;
 }
@@ -527,7 +527,7 @@ i.glyphicon.glyphicon-plus{
     background: #fa4b2a;
 }
 .foot-nav ul {
-    padding: 0.65em 0;
+    /*padding: 0.65em 0;*/
 }
 .foot-nav li a {
     color: #fff;
@@ -874,7 +874,7 @@ h4.media-heading {
 /*-- responsive-design --*/
 @media (max-width: 1024px){
 ul.nav.navbar-nav li a {
-    padding: 15px 14px ! important;
+    padding: 15px 14px;
 }
 .banner {
     padding: 8em 0 0;
@@ -1539,4 +1539,29 @@ background-color:#fa4b2a;
 background-position: center;
 width: 38px;
 height: 34px;
+}
+/* Custom Css */
+@media (max-width: 767px){
+    .navbar-nav .open .dropdown-menu{
+        background-color: #fff !important;
+    }
+}
+
+.glyphicon{
+    display: none;
+}
+
+.customPaging{
+    text-align:right !important;
+    padding-right: 20px;
+}
+.customPaging ul{
+    margin: 0px !important;
+}
+
+@media (max-width: 767px){
+    .customPaging{
+        text-align:center !important;
+        margin-top:20px;
+    }   
 }

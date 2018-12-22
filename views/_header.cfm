@@ -2,10 +2,10 @@
 <div class="header">
     <div class="header-top">
         <div class="container">
-			<div class="logo col-md-4 col-lg-3 col-sm-4 col-xs-12">
+			<div class="logo col-md-4 col-lg-4 col-sm-4 col-xs-12">
 				<a href="#cb.linkHome()#" title="#cb.siteTagLine()#"><h1>#cb.siteName()#</h1></a>
 			</div>
-			<div class="social col-md-4 col-lg-6 col-sm-4 col-xs-12 text-center">
+			<div class="social col-md-4 col-lg-5 col-sm-4 col-xs-12 text-center">
 				<ul>
 					<cfif cb.themeSetting( "showFacebookOnTop" ) NEQ ''>
 						<li><a href="#cb.themeSetting( "showFacebookOnTop" )#" class="facebook"> </a></li>
@@ -44,8 +44,7 @@
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
 		            <span class="icon-bar"></span>
-	          	</button>
-	          	
+	          	</button>	          	
 	        </div>
 	        <div id="navbar" class="navbar-collapse collapse">	       
 				<ul class="nav navbar-nav">
@@ -55,7 +54,7 @@
 						<cfif structKeyExists( menuItem, "subPageMenu" )>
 							<li class="dropdown">
 								<a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title# <b class="caret"></b></a>
-								<!--- #buildSubMenu( menuData=menuItem.subPageMenu, parentLink=menuItem.link, parentTitle=menuItem.title )# --->
+								#buildSubMenu( menuData=menuItem.subPageMenu, parentLink=menuItem.link, parentTitle=menuItem.title )#
 							</li>
 						<cfelse>
 							<cfif cb.isPageView() AND event.buildLink( cb.getCurrentPage().getSlug() ) eq menuItem.link>
@@ -83,4 +82,24 @@
 	    </div>
 	</div>
 </div>
+<cfscript>
+any function buildSubMenu( required menuData, required parentLink, required parentTitle ){
+	var menu = '<ul class="dropdown-menu">';
+
+	// Parent
+	menu &= '<li><a href="#parentLink#"><i class="fa fa-chevron-down"></i> <strong>#parentTitle#</strong></a></li><li role="separator" class="divider"></li>';
+
+	for( var menuItem in arguments.menuData ){
+		if( !structKeyExists( menuItem, "subPageMenu" ) ){
+			menu &= '<li><a href="#menuItem.link#">#menuItem.title#</a></li>';
+		} else {
+			menu &= '<li class="dropdown-submenu"><a href="#menuItem.link#" class="dropdown-toggle" data-toggle="dropdown">#menuItem.title#</a>';
+			menu &= buildSubMenu( menuItem.subPageMenu, menuItem.link, menuItem.parentTitle );
+			menu &= '</li>';
+		}
+	}
+	menu &= '</ul>';
+	return menu;
+}
+</cfscript>
 </cfoutput>

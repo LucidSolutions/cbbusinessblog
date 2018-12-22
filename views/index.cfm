@@ -90,3 +90,7 @@
 	</div>
 </div>	
 </cfoutput>
+<script type="text/javascript">
+	$('.paging').find('.col-xs-12').addClass('col-md-6');
+	$('.paging').find('.col-xs-12').last().addClass('customPaging');
+</script>

@@ -25,7 +25,7 @@
 							<cfif cb.themeSetting( "singleBlogOptions", true )>
 								<div class="blog-poast-info">
 									<ul>
-										<li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="##"> #prc.entry.getAuthorName()# </a></li>
+										<li><i class="glyphicon glyphicon-user"> </i><a class="admin" href="javascript:void(0)"> #prc.entry.getAuthorName()# </a></li>
 										<li><i class="glyphicon glyphicon-calendar"> </i>#prc.entry.getDisplayPublishedDate()#</li>
 										<li><i class="glyphicon glyphicon-comment"> </i><a href="#cb.linkEntry(prc.entry)###comments" title="View Comments"> #prc.entry.getNumberOfApprovedComments()# Comments</a></li>
 										<li><i class="glyphicon glyphicon-eye-open"> </i>#prc.entry.getnumberOfHits()# views</li>
