@@ -40,7 +40,7 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 
 				#cb.event( "cbui_preCommentForm" )#
 
-				#getModel( "messagebox@cbMessagebox" ).renderIt()#
+				#getInstance( "messagebox@cbMessagebox" ).renderIt()#
 
 				#html.hiddenField( name="contentID", value=arguments.content.getContentID() )#
 				#html.hiddenField( name="contentType", value=arguments.content.getContentType() )#
@@ -52,7 +52,7 @@ component extends="contentbox.models.ui.BaseWidget" singleton{
 					class 		= "form-control comm_form-control",
 					groupWrapper= "div class=form-group",
 					required 	= "required", 
-					value 		= event.getValue( "author", oCurrentAuthor.getName() ) 
+					value 		= event.getValue( "author", oCurrentAuthor.getFirstName() ) 
 				)#
 
 				#html.inputField( 

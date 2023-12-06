@@ -3,7 +3,11 @@
     <div class="header-top">
         <div class="container">
 			<div class="logo col-md-4 col-lg-4 col-sm-4 col-xs-12">
-				<a href="#cb.linkHome()#" title="#cb.siteTagLine()#"><h1>#cb.siteName()#</h1></a>
+				<cfif cb.themeSetting( 'headerLogo' ) is "">
+					<a href="#cb.linkHome()#" title="#cb.siteTagLine()#"><h1>#cb.siteName()#</h1></a>
+				<cfelse>
+					<a href="#cb.linkHome()#" title="#cb.siteName()#"><img src="#cb.themeSetting( 'headerLogo' )#" class="img-responsive"  class="img-responsive" /></a>
+				</cfif>
 			</div>
 			<div class="social col-md-4 col-lg-5 col-sm-4 col-xs-12 text-center">
 				<ul>
@@ -68,7 +72,7 @@
 					</cfloop>
 
 					<!--- Blog Link, verify active --->
-					<cfif ( !prc.cbSettings.cb_site_disable_blog )>
+					<cfif ( !structKeyExists(prc.cbSettings, "cb_site_disable_blog") )>
 						<cfif cb.isBlogView()>
 							<li class="active">
 						<cfelse>

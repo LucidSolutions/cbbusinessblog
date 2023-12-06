@@ -17,7 +17,7 @@
 				</cfloop>
 
 				<!--- Blog Link, verify active --->
-				<cfif ( !prc.cbSettings.cb_site_disable_blog )>
+				<cfif ( !structKeyExists(prc.cbSettings, "cb_site_disable_blog") )>
 					<cfif cb.isBlogView()><li class="active"><cfelse><li></cfif>
 						<a href="#cb.linkBlog()#">Blog</a>
 					</li>
@@ -27,8 +27,8 @@
 	</div>
 	<div class="copyright">
 		<div class="container">
-			<p>Copyright &copy; #cb.siteName()#.  All rights reserved.123</p>
-			<p>Powered by ContentBox v#cb.getContentBoxVersion()#</p>
+			<p>Theme Developed By <a href="https://lucidoutsourcing.com/">Lucid Outsourcing Solutions Pvt. Ltd.</a></p>
+            <div>#cb.themeSetting( 'footerBox' )#</div>
 		</div>
 	</div>
 	<div class="clearfix"></div>

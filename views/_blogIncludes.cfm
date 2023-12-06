@@ -49,11 +49,11 @@
 
 <!-- endinjector -->
 
-<!---<cfif len( cb.themeSetting( 'cssStyleOverrides' ) )>
+<cfif len( cb.themeSetting( 'cssStyleOverrides' ) )>
 	<style>
 		#cb.themeSetting( 'cssStyleOverrides' )#
 	</style>	
-</cfif>--->
+</cfif>
 
 <!--- ********************************************************************************* --->
 <!--- 					JAVASCRIPT														--->

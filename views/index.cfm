@@ -40,7 +40,7 @@
 
 					<cfif len( rc.category )>
 						<div class="alert alert-info">
-							Category Filtering: '#rc.category#'
+							Category Filtering: '#encodeForHTML( rc.category )#'
 							<a href="#cb.linkBlog()#" class="btn orange-btn pull-right" title="Remove filter and view all entries"> Remove Filter</a>
 						</div>
 						<br/>
@@ -50,7 +50,7 @@
 					<cfif len( rc.q )>
 						<div class="alert alert-info">
 							<a class="btn orange-btn" href="#cb.linkBlog()#" title="Clear search and view all entries"> Clear Search</a>
-							Searching by: '#rc.q#'
+							Searching by: '#encodeForHTML( rc.q )#'
 						</div>
 						<br/>
 					</cfif>
